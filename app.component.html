@@ -1,0 +1,20 @@
+ <nav>
+   <a [routerLink]="['/component-one']">component One</a>
+   <a [routerLink]="['/component-two',123]">component Two(id: 123)</a>
+   <a [routerLink]="[{ outlets: { 'sidebar': ['component-aux'] } }]">Component Aux</a>
+ </nav>
+
+  <div style="margin-top: 1rem;">
+    <button (click)="RedirectMe()"> Go to 2 component</button>
+  </div>
+ <div style="color: green; margin-top: 1rem;">Outlet:</div>
+ <div style="border: 2px solid green; padding:1rem ">
+    <router-outlet></router-outlet>
+</div>
+<div style="color: cyan; margin-top: 1rem;">Sidebar Outlet:</div>
+    <div style="border: 2px solid blue; padding: 1rem;">
+      <router-outlet name="sidebar"></router-outlet>
+    </div>
+
+
+ 
